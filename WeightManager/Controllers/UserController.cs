@@ -19,7 +19,7 @@ public class UserController : ControllerBase
     }
 
     [HttpGet("User/{id}")]
-    public async Task<ActionResult<UserResponse>> GetUser([FromRoute] int id, CancellationToken cancellationToken)
+    public async Task<ActionResult<UserResponse>> GetUserAsync([FromRoute] int id, CancellationToken cancellationToken)
     {
         try
         {
@@ -39,32 +39,35 @@ public class UserController : ControllerBase
     }
 
     [HttpPost("User")]
-    public async Task<ActionResult<User>> PostUser(UserRequest user, CancellationToken cancellationToken)
+    public async Task<ActionResult<User>> PostUserAsync(UserRequest request, CancellationToken cancellationToken)
     {
 
-        var mapped = _mapper.Map<User>(user);
+        var mapped = _mapper.Map<User>(request);
 
         try
         {
-            _dbContext.User.Add(mapped);
+            var addedUser = _dbContext.User.Add(mapped);
             await _dbContext.SaveChangesAsync(cancellationToken);
-        }
-        catch (Exception e)
-        {
-            return BadRequest(e.Message);
-        }
 
-        return Ok(user);
+            var newUser = await _dbContext.User.FirstOrDefaultAsync(x => x.Id == addedUser.Entity.Id) ??
+                throw new KeyNotFoundException("User not found!");
+
+            return Ok(_mapper.Map<UserResponse>(newUser));
+        }
+        catch (KeyNotFoundException e)
+        {
+            return NotFound(e.Message);
+        }
     }
 
     [HttpPut("User")]
-    public async Task<IActionResult> PutUser(UserRequest user, CancellationToken cancellationToken)
+    public async Task<IActionResult> PutUserAsync(UserRequest request, CancellationToken cancellationToken)
     {
         try
         {
-            var existing = await _dbContext.User.FirstOrDefaultAsync(x => x.Id == user.Id) ??
-                throw new Exception("User not found!");
-            _mapper.Map(user, existing);
+            var existing = await _dbContext.User.FirstOrDefaultAsync(x => x.Id == request.Id) ??
+                throw new KeyNotFoundException("User not found!");
+            _mapper.Map(request, existing);
 
 
             _dbContext.User.Update(existing);
@@ -72,7 +75,7 @@ public class UserController : ControllerBase
 
             return Ok();
         }
-        catch (Exception e)
+        catch (KeyNotFoundException e)
         {
             return BadRequest(e.Message);
         }

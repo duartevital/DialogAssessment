@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WeightManagerTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ea13d103200f39357a26fe0ce0e795453341da73")]
 [assembly: System.Reflection.AssemblyProductAttribute("WeightManagerTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WeightManagerTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

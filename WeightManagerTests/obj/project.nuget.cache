@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+Zs+7xK57Jg=",
+  "dgSpecHash": "W+oy/kLVqPw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Duarte\\Documents\\WeightManager\\WeightManagerTests\\WeightManagerTests.csproj",
+  "projectFilePath": "C:\\Users\\Duarte\\Documents\\WeightManager\\DialogAssessment\\WeightManagerTests\\WeightManagerTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Duarte\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
     "C:\\Users\\Duarte\\.nuget\\packages\\microsoft.codecoverage\\17.8.0\\microsoft.codecoverage.17.8.0.nupkg.sha512",

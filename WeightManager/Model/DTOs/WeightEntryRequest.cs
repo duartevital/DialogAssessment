@@ -10,7 +10,7 @@ public class WeightEntryRequest
         CreationDate = DateTime.Now;
     }
 
-    public int? id { get; set; }
+    public int? Id { get; set; }
     [Required]
     public double Weight { get; set; }
     public string? Description { get; set; }

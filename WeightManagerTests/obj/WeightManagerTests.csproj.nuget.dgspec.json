@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Duarte\\Documents\\WeightManager\\WeightManagerTests\\WeightManagerTests.csproj": {}
+    "C:\\Users\\Duarte\\Documents\\WeightManager\\DialogAssessment\\WeightManagerTests\\WeightManagerTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Duarte\\Documents\\WeightManager\\WeightManagerTests\\WeightManagerTests.csproj": {
+    "C:\\Users\\Duarte\\Documents\\WeightManager\\DialogAssessment\\WeightManagerTests\\WeightManagerTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Duarte\\Documents\\WeightManager\\WeightManagerTests\\WeightManagerTests.csproj",
+        "projectUniqueName": "C:\\Users\\Duarte\\Documents\\WeightManager\\DialogAssessment\\WeightManagerTests\\WeightManagerTests.csproj",
         "projectName": "WeightManagerTests",
-        "projectPath": "C:\\Users\\Duarte\\Documents\\WeightManager\\WeightManagerTests\\WeightManagerTests.csproj",
+        "projectPath": "C:\\Users\\Duarte\\Documents\\WeightManager\\DialogAssessment\\WeightManagerTests\\WeightManagerTests.csproj",
         "packagesPath": "C:\\Users\\Duarte\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Duarte\\Documents\\WeightManager\\WeightManagerTests\\obj\\",
+        "outputPath": "C:\\Users\\Duarte\\Documents\\WeightManager\\DialogAssessment\\WeightManagerTests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Duarte\\AppData\\Roaming\\NuGet\\NuGet.Config",
